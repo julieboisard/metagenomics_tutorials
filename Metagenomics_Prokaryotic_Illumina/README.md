@@ -124,3 +124,25 @@ Template script:
 
 Basically the whole taxonomical assignation workflow can be run using this command:
 `gtdbtk classify_wf --genome_dir <my_genomes> --out_dir <output_dir>`
+
+## LOOKING FOR EUKARYOTIC SEQUENCES WITH TIARA
+
+[TIARA](https://github.com/ibe-uw/tiara) is a deep-learning-based approach for identification of eukaryotic sequences in the metagenomic data powered by PyTorch.
+
+The sequences are classified in two stages:
+* In the first stage, the sequences are classified to classes: archaea, bacteria, prokarya, eukarya, organelle and unknown.
+* In the second stage, the sequences labeled as organelle in the first stage are classified to either mitochondria, plastid or unknown.
+
+
+```
+# install tiara
+conda create --name tiara-env python=3.8
+conda activate tiara-env
+mamba install -c conda-forge tiara
+conda install -c conda-forge mamba
+mamba install -c conda-forge tiara
+tiara-test
+
+# run tiara on a metagenome
+tiara -i contigs.fasta -o tiara_strain1.txt --tf all -t 4 --probabilities
+```
