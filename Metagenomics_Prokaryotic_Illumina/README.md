@@ -165,3 +165,5 @@ conda activate whokaryote
 whokaryote.py --contigs contigs.fasta --outdir whokaryote_output --f --minsize 1000
 
 ```
+
+We can then blast the "eukaryotes" contigs as we did with tiara blast outputs.
