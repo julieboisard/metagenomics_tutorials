@@ -151,4 +151,17 @@ We can then blast the "eukarya" contigs (see `blast_tiara.sh`) and then sort the
 ```
 cat eukarya_blast_strain1.out | sort -t "	" -k1,1 -k15,15nr > eukarya_blast_strain1_sorted.out
 cat eukarya_blast_strain1_sorted.out | sort -k1,1 -u > eukarya_blast_strain1_sorted_BH.out
+
+```
+## LOOKING FOR EUKARYOTIC SEQUENCES WITH WHOKARYOTE
+
+[Whokaryote](https://github.com/LottePronk/whokaryote) is a tool designed to distinguish eukaryotic and prokaryotic contigs in metagenomes based on gene structure. It also uses Tiara as an option.
+
+```
+conda create -c bioconda -n whokaryote whokaryote                               
+conda activate whokaryote
+
+# run whokaryote
+whokaryote.py --contigs contigs.fasta --outdir whokaryote_output --f --minsize 1000
+
 ```
