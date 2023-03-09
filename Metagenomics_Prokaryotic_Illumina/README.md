@@ -90,6 +90,9 @@ Visualize anvio analysis ([on a server through a tunnel](https://merenlab.org/20
 You can save your collection of bins (-C) and when you're done, generate a summary of your binning.
 `anvi-summarize -p SAMPLES-MERGED/PROFILE.db -c final.contigs.sed.db -C megahit -o MERGED_SUMMARY`
 
+We can then recalculate the taxonomical profile on the bins.
+`anvi-estimate-scg-taxonomy -c final.contigs.sed.db -p ./SAMPLES-MERGED/PROFILE.db -C megahit --output-file final.contigs.sed.db-taxonomy-bins.txt `
+
 
 [Refine a bin using anvi-refine](https://merenlab.org/2015/05/11/anvi-refine/): when you have bins of interest, you may want to take a closer look at them, refining them one by one - ie contig by contig.
 `anvi-refine -p SAMPLES-MERGED/PROFILE.db -c final.contigs.sed.db -C megahit -b Malaciobacter_marinus`
