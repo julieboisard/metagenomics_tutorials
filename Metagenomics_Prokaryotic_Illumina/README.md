@@ -94,6 +94,9 @@ You can save your collection of bins (-C) and when you're done, generate a summa
 [Refine a bin using anvi-refine](https://merenlab.org/2015/05/11/anvi-refine/): when you have bins of interest, you may want to take a closer look at them, refining them one by one - ie contig by contig.
 `anvi-refine -p SAMPLES-MERGED/PROFILE.db -c final.contigs.sed.db -C megahit -b Malaciobacter_marinus`
 
+After binning and summarizing, you can compute relative abundance of all MAGs.
+`anvi-estimate-scg-taxonomy -c final.contigs.sed.db -p ./SAMPLES-MERGED/PROFILE.db --metagenome-mode --compute-scg-coverages --output-file final.contigs.sed.db-abundance.txt`
+
 **Don't forget to run a new summary after refining is done.**
 `anvi-summarize -p SAMPLES-MERGED/PROFILE.db -c final.contigs.sed.db -C megahit -o MERGED_SUMMARY`
 
