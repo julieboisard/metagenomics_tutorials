@@ -4,11 +4,13 @@
 
 module load bioinfo-tools minimap2/2.24-r1122 
 
-minimap2 -t 16 -ax map-ont /path/to/medaka/consensus/Strain1_medaka_consensus/consensus.fasta /path/to/porechoped_fastq/barcodeXX_porechoped.fastq > Strain1.sam 
+contigs=/path/to/medaka/consensus/Co-assembly_medaka_consensus/consensus.fasta
 
-minimap2 -t 16 -ax map-ont /path/to/medaka/consensus/Strain2_medaka_consensus/consensus.fasta /path/to/porechoped_fastq/barcodeYY_porechoped.fastq > Strain2.sam 
+minimap2 -t 16 -ax map-ont $contigs /path/to/porechoped_fastq/barcodeXX_porechoped.fastq > Strain1.sam 
 
-minimap2 -t 16 -ax map-ont /path/to/medaka/consensus/Strain3_medaka_consensus/consensus.fasta /path/to/porechoped_fastq/barcodeZZ_porechoped.fastq > Strain3.sam 
+minimap2 -t 16 -ax map-ont $contigs /path/to/porechoped_fastq/barcodeYY_porechoped.fastq > Strain2.sam 
+
+minimap2 -t 16 -ax map-ont $contigs /path/to/porechoped_fastq/barcodeZZ_porechoped.fastq > Strain3.sam 
 
 module unload minimap2/2.24-r1122
 module load bioinfo-tools samtools/1.17

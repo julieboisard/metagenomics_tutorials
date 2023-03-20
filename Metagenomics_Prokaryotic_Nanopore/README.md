@@ -70,7 +70,7 @@ Quality was checked using metaquast 5.2 on all assemblies.
 
 ### Mapping with minimap2 and samtools
 
-Reads can be mapped back on the polished per strain metagenomes and sorted using [minimap2 2.24-r1122](https://github.com/lh3/minimap2) and samtools 1.17.
+Reads can be mapped back on the polished co-assembled metagenome and sorted using [minimap2 2.24-r1122](https://github.com/lh3/minimap2) and samtools 1.17.
 
 `minimap2.sh`
 
