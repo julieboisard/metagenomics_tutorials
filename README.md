@@ -8,3 +8,7 @@ The aim of this tutorial is to provide basic guidance on how to analyse prokaryo
 ## Metagenomics Prokarytic Nanopore tutorial
 
 The aim of this tutorial is to provide basic guidance on how to analyse prokaryotic long reads metagenomes (Nanopore).
+
+## Trycycler from SR LR metagenomes
+
+The aim of this tutorial is to present a way to get very nice prokaryotic genomes from MAGs.
